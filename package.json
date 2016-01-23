@@ -9,6 +9,9 @@
   "author": "",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "karma": "~0.13.19"
+    "karma": "~0.13.19",
+    "karma-chrome-launcher": "~0.2.2",
+    "jasmine-core": "~2.4.1",
+    "karma-jasmine": "~0.3.6"
   }
 }
