@@ -1,0 +1,21 @@
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>My Simple Application</title>
+</head>
+<body ng-controller="mainController">
+	
+	<h1>Welcome</h1>
+	<div>Application version {{version}}</div>
+	<div>
+		<ul>
+			<li ng-repeat="person in people">{{person.name}}</li>
+		</ul>
+	</div>
+	
+	
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="src/app.js"></script>
+</body>
+</html>
