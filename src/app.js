@@ -1,14 +1,20 @@
 angular.module('app', [])
-.factory('peopleFactory', function(){
+.factory('peopleFactory', function($q){
+	function getAllPeople() {
+		return $q.when([
+			{id:1, name: 'Mariano', country: 'Italy'},
+			{id:2, name: 'Walter', country: 'Peru'},
+			{id:3, name: 'Robban', country: 'Sweden'}
+		]);
+	}
+	
 	return {
-		people: [
-			{name: 'Mariano', country: 'Italy'},
-			{name: 'Walter', country: 'Peru'},
-			{name: 'Robban', country: 'Sweden'}
-		]
+		getAllPeople: getAllPeople
 	}
 })
 .controller('mainController', function($scope, peopleFactory) {
 	$scope.version = '0.0.1';
-	$scope.people = peopleFactory.people;
+	peopleFactory.getAllPeople().then(function(resultat) {
+		$scope.people = resultat;
+	});
 });
