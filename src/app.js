@@ -1,4 +1,4 @@
-angular.module('app', [])
+angular.module('app', ['ngRoute'])
 .factory('peopleFactory', function($q){
 	function getAllPeople() {
 		return $q.when([
