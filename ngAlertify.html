@@ -1,10 +1,11 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="appNgAlertify">
 <head>
 	<meta charset="UTF-8">
 	<title>Karmatester</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<link rel="stylesheet" href="bower_components/ng-alertify/dist/ng-alertify.css">
 	<link rel="stylesheet" href="styles/site.css">
 </head>
 <body ng-controller="mainController">
@@ -24,7 +25,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="./index.html">Home</a></li>
             <li><a href="./angUINotification.html">angular-ui-notification</a></li>
-            <li><a href="./angNotify.html">angular-notify</a></li>
+            <li><a href="./angularNotify.html">angular-notify</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -32,9 +33,12 @@
 	
 	<div class="container">
 		<div class="jumbotron">			
-			<h2 class="">Welcome to angular-notify test</h2>
+			<h2 class="">Welcome to ng-alertify test</h2>
 		</div>
 		<div>Application version {{version}}</div>
+		<div>
+			<button ng-click="notify('Vi lyckas visa något')">Visa meddelande</button>
+		</div>
 		<div>
 			<ul>
 				<li ng-repeat="person in people">{{person.name}}</li>
@@ -47,6 +51,7 @@
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
-	<script src="src/app.js"></script>
+	<script src="bower_components/ng-alertify/dist/ng-alertify.js"></script>
+	<script src="src/appNgAlertify.js"></script>
 </body>
 </html>
