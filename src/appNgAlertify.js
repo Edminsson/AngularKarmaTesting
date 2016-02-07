@@ -20,4 +20,7 @@ angular.module('appNgAlertify', ['ngRoute', 'Alertify'])
 	$scope.notify = function(medd) {
 		Alertify.success(medd);
 	}
+	$scope.alert = function(medd) {
+		Alertify.alert(medd);
+	}
 });
