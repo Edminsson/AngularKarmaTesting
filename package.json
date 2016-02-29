@@ -15,5 +15,8 @@
     "karma-jasmine": "~0.3.6",
     "phantomjs": "~1.9.19",
     "karma-phantomjs-launcher": "~0.2.3"
+  },
+  "dependencies": {
+    "alertifyjs": "~1.6.1"
   }
 }
