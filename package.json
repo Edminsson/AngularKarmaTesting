@@ -17,6 +17,7 @@
     "karma-phantomjs-launcher": "~0.2.3"
   },
   "dependencies": {
-    "alertifyjs": "~1.6.1"
+    "alertifyjs": "~1.6.1",
+    "grunt": "~0.4.5"
   }
 }
